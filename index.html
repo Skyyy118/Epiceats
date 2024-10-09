@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Eats Billing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>** WELCOME TO EPIC EATS **</h1>
+        <form id="billingForm">
+            <!-- Pizza Section -->
+            <h2>Pizzas</h2>
+            <div class="form-group">
+                <label for="pizzaType">Select Pizza Types and Quantity:</label>
+                <div>
+                    <label>Chicken Dominator Pizza</label>
+                    <input type="number" id="chickenDominatorPizzaQty" name="chickenDominatorPizzaQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Cheesy Chicken Pizza</label>
+                    <input type="number" id="cheesyChickenPizzaQty" name="cheesyChickenPizzaQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Loaded Mexican Pizza</label>
+                    <input type="number" id="loadedMexicanPizzaQty" name="loadedMexicanPizzaQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Pesto Pizza</label>
+                    <input type="number" id="pestoPizzaQty" name="pestoPizzaQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Italian-Style Pizza</label>
+                    <input type="number" id="italianStylePizzaQty" name="italianStylePizzaQty" min="0" value="0">
+                </div>
+            </div>
+
+            <!-- Burger Section -->
+            <h2>Burgers</h2>
+            <div class="form-group">
+                <label for="burgerType">Select Burger Types and Quantity:</label>
+                <div>
+                    <label>Aloo Tikki Burger</label>
+                    <input type="number" id="alooTikkiBurgerQty" name="alooTikkiBurgerQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Cheesy Italian Veg Burger</label>
+                    <input type="number" id="cheesyItalianVegBurgerQty" name="cheesyItalianVegBurgerQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Chicken Burger</label>
+                    <input type="number" id="chickenBurgerQty" name="chickenBurgerQty" min="0" value="0">
+                </div>
+            </div>
+
+            <!-- Chicken Section -->
+            <h2>Chicken</h2>
+            <div class="form-group">
+                <label for="chickenType">Select Chicken Types and Quantity:</label>
+                <div>
+                    <label>Chicken Roll</label>
+                    <input type="number" id="chickenRollQty" name="chickenRollQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Chicken Rice</label>
+                    <input type="number" id="chickenRiceQty" name="chickenRiceQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Chicken Snacks</label>
+                    <input type="number" id="chickenSnacksQty" name="chickenSnacksQty" min="0" value="0">
+                </div>
+            </div>
+
+            <!-- Beverage Section -->
+            <h2>Beverages</h2>
+            <div class="form-group">
+                <label for="beverageType">Select Beverages and Quantity:</label>
+                <div>
+                    <label>Water</label>
+                    <input type="number" id="waterQty" name="waterQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Cappuccino</label>
+                    <input type="number" id="cappuccinoQty" name="cappuccinoQty" min="0" value="0">
+                </div>
+                <div>
+                    <label>Coca Cola</label>
+                    <input type="number" id="cocaColaQty" name="cocaColaQty" min="0" value="0">
+                </div>
+            </div>
+
+            <!-- Other fields -->
+            <div class="form-group">
+                <label>Order Type:</label>
+                <label><input type="radio" name="orderType" value="Dine-in" required> Dine-in</label>
+                <label><input type="radio" name="orderType" value="Take-away" required> Take-away</label>
+            </div>
+
+            <div class="form-group">
+                <label>Do you need a carry bag?</label>
+                <label><input type="radio" name="carryBag" value="Yes" required> Yes</label>
+                <label><input type="radio" name="carryBag" value="No" required> No</label>
+            </div>
+
+            <button type="button" onclick="calculateBill()">Generate Bill</button>
+        </form>
+
+        <div id="billSummary" class="summary"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
