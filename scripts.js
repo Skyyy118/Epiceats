@@ -1,153 +1,88 @@
- function calculateBill() {
-    // Veg Pizza quantities and prices
+function calculateBill() {
+    // Get values for Veg Pizzas
     let margheritaPizzaQty = parseInt(document.getElementById('margheritaPizzaQty').value) || 0;
     let farmhousePizzaQty = parseInt(document.getElementById('farmhousePizzaQty').value) || 0;
     let veggieSupremePizzaQty = parseInt(document.getElementById('veggieSupremePizzaQty').value) || 0;
     let pepperPaneerPizzaQty = parseInt(document.getElementById('pepperPaneerPizzaQty').value) || 0;
     let mushroomDelightPizzaQty = parseInt(document.getElementById('mushroomDelightPizzaQty').value) || 0;
 
-    // Non-Veg Pizza quantities and prices
+    // Get values for Non-Veg Pizzas
     let chickenDominatorPizzaQty = parseInt(document.getElementById('chickenDominatorPizzaQty').value) || 0;
     let pepperoniPizzaQty = parseInt(document.getElementById('pepperoniPizzaQty').value) || 0;
     let bbqChickenPizzaQty = parseInt(document.getElementById('bbqChickenPizzaQty').value) || 0;
     let chickenSupremePizzaQty = parseInt(document.getElementById('chickenSupremePizzaQty').value) || 0;
     let meatLoversPizzaQty = parseInt(document.getElementById('meatLoversPizzaQty').value) || 0;
 
-    // Veg Burger quantities and prices
+    // Get values for Veg Burgers
     let alooTikkiBurgerQty = parseInt(document.getElementById('alooTikkiBurgerQty').value) || 0;
     let cheesyItalianVegBurgerQty = parseInt(document.getElementById('cheesyItalianVegBurgerQty').value) || 0;
     let paneerBurgerQty = parseInt(document.getElementById('paneerBurgerQty').value) || 0;
     let veggieDelightBurgerQty = parseInt(document.getElementById('veggieDelightBurgerQty').value) || 0;
     let mushroomSwissBurgerQty = parseInt(document.getElementById('mushroomSwissBurgerQty').value) || 0;
 
-    // Non-Veg Burger quantities and prices
+    // Get values for Non-Veg Burgers
     let chickenBurgerQty = parseInt(document.getElementById('chickenBurgerQty').value) || 0;
     let grilledChickenBurgerQty = parseInt(document.getElementById('grilledChickenBurgerQty').value) || 0;
     let baconBurgerQty = parseInt(document.getElementById('baconBurgerQty').value) || 0;
     let fishBurgerQty = parseInt(document.getElementById('fishBurgerQty').value) || 0;
     let steakBurgerQty = parseInt(document.getElementById('steakBurgerQty').value) || 0;
 
-    // Sides quantities and prices
+    // Get values for Sides
     let friesSize = document.getElementById('friesSize').value;
-    let friesPrice = friesSize === 'small' ? 50 : friesSize === 'medium' ? 80 : 100;
-
+    let friesPrice = (friesSize === 'small') ? 50 : (friesSize === 'medium') ? 80 : 100;
     let chickenNuggetsQty = parseInt(document.getElementById('chickenNuggetsQty').value) || 0;
     let vegNuggetsQty = parseInt(document.getElementById('vegNuggetsQty').value) || 0;
     let garlicBreadQty = parseInt(document.getElementById('garlicBreadQty').value) || 0;
     let periPeriFriesQty = parseInt(document.getElementById('periPeriFriesQty').value) || 0;
     let salsaFriesQty = parseInt(document.getElementById('salsaFriesQty').value) || 0;
 
-    // Beverages quantities and prices with sizes
-    let waterQty = parseInt(document.getElementById('waterQty').value) || 0;
-    
+    // Get values for Beverages
     let cappuccinoSize = document.getElementById('cappuccinoSize').value;
-    let cappuccinoPrice = cappuccinoSize === 'small' ? 150 : cappuccinoSize === 'medium' ? 180 : 200;
-
+    let cappuccinoPrice = (cappuccinoSize === 'small') ? 150 : (cappuccinoSize === 'medium') ? 180 : 200;
     let cocaColaSize = document.getElementById('cocaColaSize').value;
-    let cocaColaPrice = cocaColaSize === 'small' ? 50 : cocaColaSize === 'medium' ? 80 : 100;
-
+    let cocaColaPrice = (cocaColaSize === 'small') ? 50 : (cocaColaSize === 'medium') ? 80 : 100;
     let hotChocolateSize = document.getElementById('hotChocolateSize').value;
-    let hotChocolatePrice = hotChocolateSize === 'small' ? 150 : hotChocolateSize === 'medium' ? 180 : 200;
+    let hotChocolatePrice = (hotChocolateSize === 'small') ? 150 : (hotChocolateSize === 'medium') ? 180 : 200;
+    let americanoSize = document.getElementById('americanoSize').value;
+    let americanoPrice = (americanoSize === 'small') ? 150 : (americanoSize === 'medium') ? 180 : 200;
 
-    let americanoEspressoSize = document.getElementById('americanoEspressoSize').value;
-    let americanoEspressoPrice = americanoEspressoSize === 'small' ? 160 : americanoEspressoSize === 'medium' ? 200 : 220;
+    let waterQty = parseInt(document.getElementById('waterQty').value) || 0;
 
-    let mudPieSize = document.getElementById('mudPieSize').value;
-    let mudPiePrice = mudPieSize === 'small' ? 180 : mudPieSize === 'medium' ? 220 : 250;
-
-    // Dessert quantities and prices
+    // Get values for Desserts
     let cheeseCakeFlavor = document.getElementById('cheeseCakeFlavor').value;
-    let cheeseCakePrice = 250; // same for both flavors
-
+    let cheeseCakePrice = (cheeseCakeFlavor === 'blueberry') ? 200 : 220;
     let darkChocolateFudgeQty = parseInt(document.getElementById('darkChocolateFudgeQty').value) || 0;
     let chocoLavaQty = parseInt(document.getElementById('chocoLavaQty').value) || 0;
-    let cupCakeQty = parseInt(document.getElementById('cupCakeQty').value) || 0;
+    let cupCokeQty = parseInt(document.getElementById('cupCokeQty').value) || 0;
 
-    // Prices for each category
-    const margheritaPizzaPrice = 300;
-    const farmhousePizzaPrice = 400;
-    const veggieSupremePizzaPrice = 450;
-    const pepperPaneerPizzaPrice = 420;
-    const mushroomDelightPizzaPrice = 350;
-    const chickenDominatorPizzaPrice = 600;
-    const pepperoniPizzaPrice = 500;
-    const bbqChickenPizzaPrice = 550;
-    const chickenSupremePizzaPrice = 600;
-    const meatLoversPizzaPrice = 650;
-    const alooTikkiBurgerPrice = 150;
-    const cheesyItalianVegBurgerPrice = 200;
-    const paneerBurgerPrice = 180;
-    const veggieDelightBurgerPrice = 170;
-    const mushroomSwissBurgerPrice = 250;
-    const chickenBurgerPrice = 220;
-    const grilledChickenBurgerPrice = 250;
-    const baconBurgerPrice = 270;
-    const fishBurgerPrice = 260;
-    const steakBurgerPrice = 300;
-    const chickenNuggetsPrice = 100;
-    const vegNuggetsPrice = 90;
-    const garlicBreadPrice = 120;
-    const periPeriFriesPrice = 100;
-    const salsaFriesPrice = 110;
-    const darkChocolateFudgePrice = 150;
-    const chocoLavaPrice = 140;
-    const cupCakePrice = 80;
-    const waterPrice = 20;
-
-    // Calculate total for each category
-    let totalPizzaPrice = (margheritaPizzaQty * margheritaPizzaPrice) + 
-                          (farmhousePizzaQty * farmhousePizzaPrice) +
-                          (veggieSupremePizzaQty * veggieSupremePizzaPrice) +
-                          (pepperPaneerPizzaQty * pepperPaneerPizzaPrice) +
-                          (mushroomDelightPizzaQty * mushroomDelightPizzaPrice) +
-                          (chickenDominatorPizzaQty * chickenDominatorPizzaPrice) +
-                          (pepperoniPizzaQty * pepperoniPizzaPrice) +
-                          (bbqChickenPizzaQty * bbqChickenPizzaPrice) +
-                          (chickenSupremePizzaQty * chickenSupremePizzaPrice) +
-                          (meatLoversPizzaQty * meatLoversPizzaPrice);
-
-    let totalBurgerPrice = (alooTikkiBurgerQty * alooTikkiBurgerPrice) +
-                           (cheesyItalianVegBurgerQty * cheesyItalianVegBurgerPrice) +
-                           (paneerBurgerQty * paneerBurgerPrice) +
-                           (veggieDelightBurgerQty * veggieDelightBurgerPrice) +
-                           (mushroomSwissBurgerQty * mushroomSwissBurgerPrice) +
-                           (chickenBurgerQty * chickenBurgerPrice) +
-                           (grilledChickenBurgerQty * grilledChickenBurgerPrice) +
-                           (baconBurgerQty * baconBurgerPrice) +
-                           (fishBurgerQty * fishBurgerPrice) +
-                           (steakBurgerQty * steakBurgerPrice);
-
-    let totalSidesPrice = friesPrice + 
-                          (chickenNuggetsQty * chickenNuggetsPrice) + 
-                          (vegNuggetsQty * vegNuggetsPrice) + 
-                          (garlicBreadQty * garlicBreadPrice) + 
-                          (periPeriFriesQty * periPeriFriesPrice) + 
-                          (salsaFriesQty * salsaFriesPrice);
-
-    let totalBeveragePrice = (waterQty * waterPrice) + cappuccinoPrice + cocaColaPrice + hotChocolatePrice + americanoEspressoPrice + mudPiePrice;
-
-    let totalDessertPrice = cheeseCakePrice + 
-                            (darkChocolateFudgeQty * darkChocolateFudgePrice) + 
-                            (chocoLavaQty * chocoLavaPrice) + 
-                            (cupCakeQty * cupCakePrice);
-
-    // Total price calculation
-    let totalPrice = totalPizzaPrice + totalBurgerPrice + totalSidesPrice + totalBeveragePrice + totalDessertPrice;
-
-    // Add carry bag charge if applicable
+    // Get values for Order Type and Carry Bag
+    let orderType = document.querySelector('input[name="orderType"]:checked').value;
     let carryBag = document.querySelector('input[name="carryBag"]:checked').value;
-    const carryBagPrice = 10;
-    if (carryBag === 'Yes') {
-        totalPrice += carryBagPrice;
-    }
+    let carryBagPrice = (carryBag === 'Yes') ? 10 : 0;
 
-    // Calculate GST (9%)
+    // Calculate total price
+    let totalPrice = (margheritaPizzaQty * 200) + (farmhousePizzaQty * 250) + (veggieSupremePizzaQty * 300) +
+                     (pepperPaneerPizzaQty * 280) + (mushroomDelightPizzaQty * 260) +
+                     (chickenDominatorPizzaQty * 350) + (pepperoniPizzaQty * 300) +
+                     (bbqChickenPizzaQty * 320) + (chickenSupremePizzaQty * 350) + (meatLoversPizzaQty * 400) +
+                     (alooTikkiBurgerQty * 100) + (cheesyItalianVegBurgerQty * 180) + (paneerBurgerQty * 150) +
+                     (veggieDelightBurgerQty * 140) + (mushroomSwissBurgerQty * 170) +
+                     (chickenBurgerQty * 180) + (grilledChickenBurgerQty * 220) + (baconBurgerQty * 250) +
+                     (fishBurgerQty * 240) + (steakBurgerQty * 300) +
+                     (friesPrice) + (chickenNuggetsQty * 120) + (vegNuggetsQty * 100) + 
+                     (garlicBreadQty * 80) + (periPeriFriesQty * 90) + (salsaFriesQty * 100) +
+                     (waterQty * 20) + cappuccinoPrice + cocaColaPrice + hotChocolatePrice + americanoPrice +
+                     cheeseCakePrice + (darkChocolateFudgeQty * 150) + (chocoLavaQty * 120) + (cupCokeQty * 80) +
+                     carryBagPrice;
+
+    // Calculate GST
     let gst = totalPrice * 0.09;
     let totalWithGst = totalPrice + gst;
 
     // Display the bill summary
     let billSummary = `
         <h2>** BILL SUMMARY **</h2>
+        <p>Order Type: ${orderType}</p>
         <p>Total (excluding GST): ₹${totalPrice.toFixed(2)}</p>
         <p>GST (9%): ₹${gst.toFixed(2)}</p>
         <p>Total (including GST): ₹${totalWithGst.toFixed(2)}</p>
