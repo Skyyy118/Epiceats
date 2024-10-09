@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    padding: 20px;
 }
 
 .container {
@@ -21,8 +21,6 @@ body {
     border-radius: 8px;
     max-width: 800px;
     width: 100%;
-    overflow-y: auto;
-    height: 90vh;
 }
 
 h1, h2 {
@@ -30,20 +28,27 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
+h1 {
+    font-size: 2em;
+}
+
 h2 {
-    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
-input[type="number"], select {
+input[type="number"],
+select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -52,8 +57,8 @@ input[type="number"], select {
     font-size: 16px;
 }
 
-input[type="radio"], input[type="checkbox"] {
-    margin-right: 10px;
+select {
+    height: 40px;
 }
 
 button {
@@ -64,9 +69,8 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    margin-top: 20px;
 }
 
 button:hover {
@@ -79,33 +83,21 @@ button:hover {
     background-color: #f9f9f9;
     border-radius: 5px;
     text-align: center;
+    border: 1px solid #ddd;
 }
 
 .summary p {
-    margin: 5px 0;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
 }
 
-form h2 {
-    background-color: #e0e0e0;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    margin-bottom: 15px;
+h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #444;
 }
 
-form .form-group div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-form .form-group div label {
-    flex: 2;
+input[type="radio"] {
     margin-right: 10px;
-}
-
-form .form-group div input[type="number"],
-form .form-group div select {
-    flex: 1;
-    text-align: center;
 }
