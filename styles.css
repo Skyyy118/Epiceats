@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 .container {
@@ -18,13 +19,19 @@ body {
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
+    overflow-y: auto;
+    height: 90vh;
 }
 
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 20px;
 }
 
 .form-group {
@@ -36,12 +43,17 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="number"] {
+input[type="number"], select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 button {
@@ -54,6 +66,7 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 button:hover {
@@ -70,4 +83,29 @@ button:hover {
 
 .summary p {
     margin: 5px 0;
+}
+
+form h2 {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+form .form-group div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form .form-group div label {
+    flex: 2;
+    margin-right: 10px;
+}
+
+form .form-group div input[type="number"],
+form .form-group div select {
+    flex: 1;
+    text-align: center;
 }
