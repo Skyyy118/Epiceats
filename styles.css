@@ -1,4 +1,4 @@
-/* General Reset */
+/* General reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,16 +11,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
     background-color: white;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
@@ -28,13 +29,27 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input[type="number"], select {
@@ -43,18 +58,23 @@ input[type="number"], select {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
+}
+
+select {
+    height: 40px;
 }
 
 button {
-    display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 button:hover {
@@ -62,18 +82,28 @@ button:hover {
 }
 
 .summary {
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 30px;
+    padding: 15px;
     background-color: #f9f9f9;
     border-radius: 5px;
-    text-align: center;
+    text-align: left;
+    border: 1px solid #ddd;
 }
 
 .summary p {
-    margin: 5px 0;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
 }
 
-/* Hidden by default for options */
-#cappuccinoOptions, #cheeseCakeOptions {
-    display: none;
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style radio buttons */
+input[type="radio"] {
+    margin-right: 10px;
 }
