@@ -103,7 +103,6 @@ input[type="radio"] {
     margin-right: 10px;
 }
 
-/* Added overflow property */
 body {
     max-height: 100vh;
     overflow-y: scroll; /* Enables scrolling for longer content */
