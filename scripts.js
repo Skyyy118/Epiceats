@@ -39,10 +39,10 @@ function generateBill() {
 
     // Sides details
     const friesSize = document.getElementById('friesSize').value;
-    let friesPrice = friesSize === 'small' ? 50 : friesSize === 'medium' ? 80 : 100;
+    let friesPrice = friesSize === 'small' ? 50 : friesSize === 'medium' ? 80 : friesSize === 'large' ? 100 : 0;
 
     const sides = [
-        { name: `Fries (${friesSize})`, price: friesPrice, qty: 1 },
+        { name: `Fries (${friesSize})`, price: friesPrice, qty: friesSize !== "0" ? 1 : 0 },
         { name: 'Chicken Nuggets', price: 120, qty: parseInt(document.getElementById('chickenNuggetsQty').value) || 0 },
         { name: 'Veg Nuggets', price: 100, qty: parseInt(document.getElementById('vegNuggetsQty').value) || 0 },
         { name: 'Garlic Bread', price: 60, qty: parseInt(document.getElementById('garlicBreadQty').value) || 0 },
@@ -52,27 +52,27 @@ function generateBill() {
 
     // Beverages details
     const cappuccinoSize = document.getElementById('cappuccinoSize').value;
-    const cappuccinoPrice = cappuccinoSize === 'small' ? 100 : cappuccinoSize === 'medium' ? 150 : 200;
+    const cappuccinoPrice = cappuccinoSize === 'small' ? 100 : cappuccinoSize === 'medium' ? 150 : cappuccinoSize === 'large' ? 200 : 0;
 
     const cocaColaSize = document.getElementById('cocaColaSize').value;
-    const cocaColaPrice = cocaColaSize === 'small' ? 50 : cocaColaSize === 'medium' ? 80 : 100;
+    const cocaColaPrice = cocaColaSize === 'small' ? 50 : cocaColaSize === 'medium' ? 80 : cocaColaSize === 'large' ? 100 : 0;
 
     const hotChocolateSize = document.getElementById('hotChocolateSize').value;
-    const hotChocolatePrice = hotChocolateSize === 'small' ? 150 : hotChocolateSize === 'medium' ? 180 : 200;
+    const hotChocolatePrice = hotChocolateSize === 'small' ? 150 : hotChocolateSize === 'medium' ? 180 : hotChocolateSize === 'large' ? 200 : 0;
 
     const americanoSize = document.getElementById('americanoSize').value;
-    const americanoPrice = americanoSize === 'small' ? 120 : americanoSize === 'medium' ? 160 : 200;
+    const americanoPrice = americanoSize === 'small' ? 120 : americanoSize === 'medium' ? 160 : americanoSize === 'large' ? 200 : 0;
 
     const mudPieSize = document.getElementById('mudPieSize').value;
-    const mudPiePrice = mudPieSize === 'small' ? 130 : mudPieSize === 'medium' ? 170 : 220;
+    const mudPiePrice = mudPieSize === 'small' ? 130 : mudPieSize === 'medium' ? 170 : mudPieSize === 'large' ? 220 : 0;
 
     const beverages = [
         { name: `Water`, price: 30, qty: parseInt(document.getElementById('waterQty').value) || 0 },
-        { name: `Cappuccino (${cappuccinoSize})`, price: cappuccinoPrice, qty: 1 },
-        { name: `Coca Cola (${cocaColaSize})`, price: cocaColaPrice, qty: 1 },
-        { name: `Hot Chocolate (${hotChocolateSize})`, price: hotChocolatePrice, qty: 1 },
-        { name: `Americano (${americanoSize})`, price: americanoPrice, qty: 1 },
-        { name: `Mud Pie (${mudPieSize})`, price: mudPiePrice, qty: 1 }
+        { name: `Cappuccino (${cappuccinoSize})`, price: cappuccinoPrice, qty: cappuccinoSize !== "0" ? 1 : 0 },
+        { name: `Coca Cola (${cocaColaSize})`, price: cocaColaPrice, qty: cocaColaSize !== "0" ? 1 : 0 },
+        { name: `Hot Chocolate (${hotChocolateSize})`, price: hotChocolatePrice, qty: hotChocolateSize !== "0" ? 1 : 0 },
+        { name: `Americano (${americanoSize})`, price: americanoPrice, qty: americanoSize !== "0" ? 1 : 0 },
+        { name: `Mud Pie (${mudPieSize})`, price: mudPiePrice, qty: mudPieSize !== "0" ? 1 : 0 }
     ];
 
     // Desserts details
