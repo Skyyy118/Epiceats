@@ -103,12 +103,12 @@ function generateBill() {
 
     // Display bill summary
     const billSummary = `
-        <h2>** BILL SUMMARY **</h2>
+        <h2> BILL SUMMARY </h2>
         <p>${billDetails.join('<br>')}</p>
         <p>Total (excluding GST): ₹${totalPrice.toFixed(2)}</p>
         <p>GST (9%): ₹${gst.toFixed(2)}</p>
         <p>Total (including GST): ₹${totalWithGst.toFixed(2)}</p>
-        <h3>** THANK YOU, VISIT AGAIN! **</h3>
+        <h3> THANK YOU, VISIT AGAIN! </h3>
     `;
     document.getElementById('billSummary').innerHTML = billSummary;
 }
