@@ -81,13 +81,12 @@ function calculateBill() {
 
     // Display the bill summary
     let billSummary = `
-        <h2>** BILL SUMMARY **</h2>
-        <p>Order Type: ${orderType}</p>
-        <p>Total (excluding GST): ₹${totalPrice.toFixed(2)}</p>
-        <p>GST (9%): ₹${gst.toFixed(2)}</p>
-        <p>Total (including GST): ₹${totalWithGst.toFixed(2)}</p>
-        <h3>** THANK YOU, VISIT AGAIN! **</h3>
-    `;
+    <h2> BILL SUMMARY </h2>
+    <p>Order Type: ${orderType}</p>
+    <p>Total (excluding GST): ₹${totalPrice.toFixed(2)}</p>
+    <p>GST (9%): ₹${gst.toFixed(2)}</p>
+    <p>Total (including GST): ₹${totalWithGst.toFixed(2)}</p>
+    <h3>Thank you for choosing Epic Eats! We look forward to serving you again!</h3>
+`;
 
-    document.getElementById('billSummary').innerHTML = billSummary;
-}
+document.getElementById('billSummary').innerHTML = billSummary;
