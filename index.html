@@ -3,235 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epic Eats Billing System</title>
+    <title>Epic Eats Fine Dine Billing System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1> WELCOME TO EPIC EATS FINE DINE </h1>
-        <form id="billingForm">
-            
-            <!-- Veg Pizzas Section -->
-            <h2>Veg Pizzas</h2>
-            <div class="form-group">
-                <label>Select Veg Pizza Types and Quantity:</label>
-                <div>
-                    <label>Margherita Pizza</label>
-                    <input type="number" id="margheritaPizzaQty" name="margheritaPizzaQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Farmhouse Pizza</label>
-                    <input type="number" id="farmhousePizzaQty" name="farmhousePizzaQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Veggie Supreme Pizza</label>
-                    <input type="number" id="veggieSupremePizzaQty" name="veggieSupremePizzaQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Pepper Paneer Pizza</label>
-                    <input type="number" id="pepperPaneerPizzaQty" name="pepperPaneerPizzaQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Mushroom Delight Pizza</label>
-                    <input type="number" id="mushroomDelightPizzaQty" name="mushroomDelightPizzaQty" min="0" value="0">
-                </div>
+
+        <!-- Pizzas Section -->
+        <h2>Veg Pizzas</h2>
+        <div class="form-group">
+            <label for="margheritaPizzaQty">Margherita Pizza - ₹200:</label>
+            <input type="number" id="margheritaPizzaQty" value="0" min="0">
+        </div>
+        <div class="form-group">
+            <label for="farmhousePizzaQty">Farmhouse Pizza - ₹250:</label>
+            <input type="number" id="farmhousePizzaQty" value="0" min="0">
+        </div>
+        <div class="form-group">
+            <label for="veggieSupremePizzaQty">Veggie Supreme Pizza - ₹300:</label>
+            <input type="number" id="veggieSupremePizzaQty" value="0" min="0">
+        </div>
+
+        <!-- Burgers Section -->
+        <h2>Veg Burgers</h2>
+        <div class="form-group">
+            <label for="alooTikkiBurgerQty">Aloo Tikki Burger - ₹100:</label>
+            <input type="number" id="alooTikkiBurgerQty" value="0" min="0">
+        </div>
+        <div class="form-group">
+            <label for="paneerBurgerQty">Paneer Burger - ₹150:</label>
+            <input type="number" id="paneerBurgerQty" value="0" min="0">
+        </div>
+
+        <h2>Non-Veg Burgers</h2>
+        <div class="form-group">
+            <label for="chickenBurgerQty">Chicken Burger - ₹180:</label>
+            <input type="number" id="chickenBurgerQty" value="0" min="0">
+        </div>
+        <div class="form-group">
+            <label for="baconBurgerQty">Bacon Burger - ₹250:</label>
+            <input type="number" id="baconBurgerQty" value="0" min="0">
+        </div>
+
+        <!-- Sides Section -->
+        <h2>Sides</h2>
+        <div class="form-group">
+            <label for="friesSize">Fries (Select Size):</label>
+            <select id="friesSize">
+                <option value="0">Select Size</option>
+                <option value="small">Small - ₹50</option>
+                <option value="medium">Medium - ₹80</option>
+                <option value="large">Large - ₹100</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="chickenNuggetsQty">Chicken Nuggets - ₹120:</label>
+            <input type="number" id="chickenNuggetsQty" value="0" min="0">
+        </div>
+        
+        <!-- Beverages Section -->
+        <h2>Beverages</h2>
+        <div class="form-group">
+            <label><input type="checkbox" id="cappuccinoCheckbox" onclick="toggleOption('beverages', 'cappuccinoCheckbox', 'cappuccinoOptions')"> Cappuccino</label>
+            <div id="cappuccinoOptions" style="display: none;">
+                <label for="cappuccinoSize">Select Size:</label>
+                <select id="cappuccinoSize">
+                    <option value="0">Select Size</option>
+                    <option value="small">Small - ₹150</option>
+                    <option value="medium">Medium - ₹180</option>
+                    <option value="large">Large - ₹200</option>
+                </select>
             </div>
+        </div>
 
-            <!-- Non-Veg Pizzas Section -->
-            <h2>Non-Veg Pizzas</h2>
-            <div class="form-group">
-                <label>Select Non-Veg Pizza Types and Quantity:</label>
-                <div>
-                    <label>Chicken Dominator Pizza</label>
-                    <input type="number" id="chickenDominatorPizzaQty" name="chickenDominatorPizzaQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Pepperoni Pizza</label>
-                    <input type="number" id="pepperoniPizzaQty" name="pepperoniPizzaQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>BBQ Chicken Pizza</label>
-                    <input type="number" id="bbqChickenPizzaQty" name="bbqChickenPizzaQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Chicken Supreme Pizza</label>
-                    <input type="number" id="chickenSupremePizzaQty" name="chickenSupremePizzaQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Meat Lovers Pizza</label>
-                    <input type="number" id="meatLoversPizzaQty" name="meatLoversPizzaQty" min="0" value="0">
-                </div>
+        <!-- Desserts Section -->
+        <h2>Desserts</h2>
+        <div class="form-group">
+            <label><input type="checkbox" id="cheeseCakeCheckbox" onclick="toggleOption('dessert', 'cheeseCakeCheckbox', 'cheeseCakeOptions')"> Cheese Cake</label>
+            <div id="cheeseCakeOptions" style="display: none;">
+                <label for="cheeseCakeFlavor">Select Flavor:</label>
+                <select id="cheeseCakeFlavor">
+                    <option value="0">Select Flavor</option>
+                    <option value="blueberry">Blueberry - ₹250</option>
+                    <option value="cranberry">Cranberry - ₹270</option>
+                </select>
             </div>
+        </div>
 
-            <!-- Veg Burgers Section -->
-            <h2>Veg Burgers</h2>
-            <div class="form-group">
-                <label>Select Veg Burger Types and Quantity:</label>
-                <div>
-                    <label>Aloo Tikki Burger</label>
-                    <input type="number" id="alooTikkiBurgerQty" name="alooTikkiBurgerQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Cheesy Italian Veg Burger</label>
-                    <input type="number" id="cheesyItalianVegBurgerQty" name="cheesyItalianVegBurgerQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Paneer Burger</label>
-                    <input type="number" id="paneerBurgerQty" name="paneerBurgerQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Veggie Delight Burger</label>
-                    <input type="number" id="veggieDelightBurgerQty" name="veggieDelightBurgerQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Mushroom Swiss Burger</label>
-                    <input type="number" id="mushroomSwissBurgerQty" name="mushroomSwissBurgerQty" min="0" value="0">
-                </div>
-            </div>
+        <!-- Order Type and Carry Bag Section -->
+        <div class="form-group">
+            <label>Order Type:</label>
+            <label><input type="radio" name="orderType" value="Dine-in" required> Dine-in</label>
+            <label><input type="radio" name="orderType" value="Take-away" required> Take-away</label>
+        </div>
 
-            <!-- Non-Veg Burgers Section -->
-            <h2>Non-Veg Burgers</h2>
-            <div class="form-group">
-                <label>Select Non-Veg Burger Types and Quantity:</label>
-                <div>
-                    <label>Chicken Burger</label>
-                    <input type="number" id="chickenBurgerQty" name="chickenBurgerQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Grilled Chicken Burger</label>
-                    <input type="number" id="grilledChickenBurgerQty" name="grilledChickenBurgerQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Bacon Burger</label>
-                    <input type="number" id="baconBurgerQty" name="baconBurgerQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Fish Burger</label>
-                    <input type="number" id="fishBurgerQty" name="fishBurgerQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Steak Burger</label>
-                    <input type="number" id="steakBurgerQty" name="steakBurgerQty" min="0" value="0">
-                </div>
-            </div>
+        <div class="form-group">
+            <label>Do you need a carry bag?</label>
+            <label><input type="radio" name="carryBag" value="Yes" required> Yes</label>
+            <label><input type="radio" name="carryBag" value="No" required> No</label>
+        </div>
 
-            <!-- Sides Section -->
-            <h2>Sides</h2>
-            <div class="form-group">
-                <label>Select Sides and Quantity:</label>
-                <div>
-                    <label>Fries (Select Size)</label>
-                    <select id="friesSize">
-                        <option value="small">Small - ₹50</option>
-                        <option value="medium">Medium - ₹80</option>
-                        <option value="large">Large - ₹100</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Chicken Nuggets</label>
-                    <input type="number" id="chickenNuggetsQty" name="chickenNuggetsQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Veg Nuggets</label>
-                    <input type="number" id="vegNuggetsQty" name="vegNuggetsQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Garlic Bread</label>
-                    <input type="number" id="garlicBreadQty" name="garlicBreadQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Peri Peri Fries</label>
-                    <input type="number" id="periPeriFriesQty" name="periPeriFriesQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Salsa Fries</label>
-                    <input type="number" id="salsaFriesQty" name="salsaFriesQty" min="0" value="0">
-                </div>
-            </div>
-
-            <!-- Beverages Section -->
-            <h2>Beverages</h2>
-            <div class="form-group">
-                <label>Select Beverages and Quantity:</label>
-                <div>
-                    <label>Water</label>
-                    <input type="number" id="waterQty" name="waterQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Cappuccino</label>
-                    <select id="cappuccinoSize">
-                        <option value="small">Small - ₹150</option>
-                        <option value="medium">Medium - ₹180</option>
-                        <option value="large">Large - ₹200</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Coca Cola</label>
-                    <select id="cocaColaSize">
-                        <option value="small">Small - ₹50</option>
-                        <option value="medium">Medium - ₹80</option>
-                        <option value="large">Large - ₹100</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Hot Chocolate</label>
-                    <select id="hotChocolateSize">
-                        <option value="small">Small - ₹150</option>
-                        <option value="medium">Medium - ₹180</option>
-                        <option value="large">Large - ₹200</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Americano Espresso</label>
-                    <select id="americanoSize">
-                        <option value="small">Small - ₹150</option>
-                        <option value="medium">Medium - ₹180</option>
-                        <option value="large">Large - ₹200</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Desserts Section -->
-            <h2>Desserts</h2>
-            <div class="form-group">
-                <label>Select Desserts and Quantity:</label>
-                <div>
-                    <label>Cheese Cake (Select Flavor)</label>
-                    <select id="cheeseCakeFlavor">
-                        <option value="blueberry">Blueberry - ₹200</option>
-                        <option value="cranberry">Cranberry - ₹220</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Dark Chocolate Fudge</label>
-                    <input type="number" id="darkChocolateFudgeQty" name="darkChocolateFudgeQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Choco Lava</label>
-                    <input type="number" id="chocoLavaQty" name="chocoLavaQty" min="0" value="0">
-                </div>
-                <div>
-                    <label>Cup Coke</label>
-                    <input type="number" id="cupCokeQty" name="cupCokeQty" min="0" value="0">
-                </div>
-            </div>
-
-            <!-- Carry Bag Option -->
-            <div class="form-group">
-                <label>Order Type:</label>
-                <label><input type="radio" name="orderType" value="Dine-in" required> Dine-in</label>
-                <label><input type="radio" name="orderType" value="Take-away" required> Take-away</label>
-            </div>
-
-            <div class="form-group">
-                <label>Do you need a carry bag?</label>
-                <label><input type="radio" name="carryBag" value="Yes" required> Yes</label>
-                <label><input type="radio" name="carryBag" value="No" required> No</label>
-            </div>
-
-            <button type="button" onclick="calculateBill()">Generate Bill</button>
-        </form>
-
+        <button type="button" onclick="calculateBill()">Generate Bill</button>
         <div id="billSummary" class="summary"></div>
     </div>
 
