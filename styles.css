@@ -7,7 +7,9 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #799567; /* Sage background */
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); /* Rainbow gradient background */
+    background-size: 400% 400%;
+    animation: rainbowBackground 15s ease infinite; /* Smoothly animate the gradient */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,50 +18,47 @@ body {
     color: #374151; /* Darker grey for text */
 }
 
-/* Container Styling with Rainbow Border Animation */
+/* Rainbow Background Animation */
+@keyframes rainbowBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container Styling */
 .container {
-    background-color: #ffffff; /* White container */
+    background-color: #ffffff; /* Plain white background */
     padding: 40px;
     max-width: 750px;
     width: 100%;
     border-radius: 12px;
-    position: relative;
-    z-index: 1;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.container:before {
-    content: '';
-    position: absolute;
-    top: -2px; left: -2px; right: -2px; bottom: -2px;
-    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-    background-size: 400%;
-    border-radius: 12px;
-    z-index: -1;
-    animation: rainbowFade 5s linear infinite; /* Fading rainbow animation */
-}
-
-@keyframes rainbowFade {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    border: 1px solid #e5e7eb;
+    text-align: center;
 }
 
 /* Headings Styling */
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #374151; /* Dark grey text */
+    font-weight: bold;
 }
 
 h1 {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 36px;
+    color: #3b82f6; /* Attractive blue for the main heading */
     text-transform: uppercase;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 28px;
+    color: #22c55e; /* Attractive green for subheading */
     margin-top: 30px;
     margin-bottom: 15px;
 }
@@ -73,7 +72,8 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #4b5563; /* Medium grey */
+    color: #6b7280; /* Medium grey */
+    font-size: 18px;
 }
 
 /* Inputs and Select Styling */
@@ -89,14 +89,14 @@ input[type="number"], select {
 }
 
 input[type="number"]:focus, select:focus {
-    border-color: #799567; /* Sage border on focus */
+    border-color: #3b82f6; /* Blue border on focus */
 }
 
 /* Button Styling */
 button {
     width: 100%;
     padding: 14px;
-    background-color: #799567; /* Sage button */
+    background-color: #3b82f6; /* Blue button */
     color: white;
     border: none;
     border-radius: 8px;
@@ -104,12 +104,12 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(121, 149, 103, 0.2); /* Subtle shadow */
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2); /* Subtle shadow */
 }
 
 button:hover {
-    background-color: #6b8d58; /* Darker sage on hover */
-    box-shadow: 0 6px 14px rgba(121, 149, 103, 0.3);
+    background-color: #2563eb; /* Darker blue on hover */
+    box-shadow: 0 6px 14px rgba(59, 130, 246, 0.3);
 }
 
 button:active {
@@ -148,17 +148,4 @@ h3 {
 /* Radio Button Styling */
 input[type="radio"] {
     margin-right: 10px;
-}
-
-/* Rainbow Fade Animation */
-@keyframes rainbowFade {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
