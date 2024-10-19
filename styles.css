@@ -8,26 +8,26 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #799567; /* Sage background */
-    background-image: linear-gradient(to right, #000000 50%, #333333 50%); /* Gradient in black tones */
+    background-image: linear-gradient(135deg, #000000 25%, #333333 75%); /* Diagonal gradient */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    background-size: 200% 200%;
-    animation: gradient 20s ease infinite; /* Smooth animation */
+    background-size: 400% 400%; /* Larger background size for a smooth effect */
+    animation: gradientShift 10s ease infinite; /* New, smooth diagonal gradient animation */
 }
 
 /* Gradient Animation */
-@keyframes gradient {
+@keyframes gradientShift {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
 }
 
