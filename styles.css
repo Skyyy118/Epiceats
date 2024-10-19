@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ff0000; /* Red background */
+    background-color: #799567; /* Sage background */
     background-image: linear-gradient(to right, #000000 50%, #333333 50%); /* Gradient in black tones */
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
     padding: 20px;
     background-size: 200% 200%;
-    animation: gradient 20s ease infinite; /* Slower and smoother animation */
+    animation: gradient 20s ease infinite; /* Smooth animation */
 }
 
 /* Gradient Animation */
