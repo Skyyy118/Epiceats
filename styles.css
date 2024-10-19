@@ -8,69 +8,40 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #799567; /* Sage background */
-    background-image: linear-gradient(135deg, #000000 25%, #333333 75%); /* Diagonal black gradient */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    background-size: 200% 200%;
-    animation: pulseGradient 10s ease-in-out infinite; /* Modern subtle pulse animation */
-}
-
-/* Modern Gradient Pulse Animation */
-@keyframes pulseGradient {
-    0% {
-        background-size: 200% 200%;
-        background-position: 0% 50%;
-    }
-    50% {
-        background-size: 220% 220%; /* Expanding the gradient for a 'pulse' effect */
-        background-position: 50% 50%; /* Shifting the gradient slightly */
-    }
-    100% {
-        background-size: 200% 200%;
-        background-position: 0% 50%;
-    }
+    color: #374151; /* Darker grey for text */
 }
 
 /* Container Styling */
 .container {
-    background-color: #ffffff;
+    background-color: #ffffff; /* White container */
     padding: 40px;
     max-width: 750px;
     width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     border: 1px solid #e5e7eb;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.container:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 /* Headings Styling */
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #374151; /* Dark grey text */
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
-    color: #3b82f6;
-    margin-top: 0;
     text-transform: uppercase;
-    background: linear-gradient(to right, #3b82f6, #6366f1);
-    -webkit-background-clip: text;
-    color: transparent;
 }
 
 h2 {
     font-size: 24px;
-    color: #374151;
     margin-top: 30px;
     margin-bottom: 15px;
 }
@@ -84,52 +55,43 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #6b7280;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    color: #4b5563; /* Medium grey */
 }
 
 /* Inputs and Select Styling */
 input[type="number"], select {
     width: 100%;
-    padding: 14px;
-    margin-bottom: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
     font-size: 16px;
-    background-color: #f9fafb;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9fafb; /* Light grey background for inputs */
+    transition: border-color 0.3s ease;
 }
 
 input[type="number"]:focus, select:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
-}
-
-select {
-    height: 50px;
-    background-color: #f9fafb;
+    border-color: #799567; /* Sage border on focus */
 }
 
 /* Button Styling */
 button {
     width: 100%;
     padding: 14px;
-    background-color: #2563eb;
+    background-color: #799567; /* Sage button */
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(121, 149, 103, 0.2); /* Subtle shadow */
 }
 
 button:hover {
-    background-color: #1d4ed8;
-    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+    background-color: #6b8d58; /* Darker sage on hover */
+    box-shadow: 0 6px 14px rgba(121, 149, 103, 0.3);
 }
 
 button:active {
@@ -139,35 +101,30 @@ button:active {
 /* Summary Section Styling */
 .summary {
     margin-top: 40px;
-    padding: 25px;
+    padding: 20px;
     background-color: #f9fafb;
-    border-radius: 12px;
+    border-radius: 10px;
     text-align: left;
     border: 1px solid #e5e7eb;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    color: #374151; /* Darker grey text */
 }
 
 .summary p {
-    margin: 14px 0;
-    font-size: 18px;
-    color: #4b5563;
+    margin: 12px 0;
+    font-size: 17px;
 }
 
 .summary p:first-child {
     font-weight: bold;
-    color: #111827;
 }
 
 /* Footer Message Styling */
 h3 {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 22px;
     font-weight: bold;
-    color: #374151;
-    background: linear-gradient(to right, #3b82f6, #6366f1);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: #374151; /* Dark grey */
 }
 
 /* Radio Button Styling */
