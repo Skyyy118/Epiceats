@@ -16,15 +16,33 @@ body {
     color: #374151; /* Darker grey for text */
 }
 
-/* Container Styling */
+/* Container Styling with Rainbow Border Animation */
 .container {
     background-color: #ffffff; /* White container */
     padding: 40px;
     max-width: 750px;
     width: 100%;
     border-radius: 12px;
+    position: relative;
+    z-index: 1;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border: 1px solid #e5e7eb;
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400%;
+    border-radius: 12px;
+    z-index: -1;
+    animation: rainbowFade 5s linear infinite; /* Fading rainbow animation */
+}
+
+@keyframes rainbowFade {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Headings Styling */
@@ -130,4 +148,17 @@ h3 {
 /* Radio Button Styling */
 input[type="radio"] {
     margin-right: 10px;
+}
+
+/* Rainbow Fade Animation */
+@keyframes rainbowFade {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
