@@ -1,0 +1,22 @@
+Task: Python Built-In Methods Explorer
+
+Create a Python script that explores and demonstrates the built-in functions and methods available for the following data types:
+
+String
+List
+Tuple
+Set
+Dictionary
+
+Your script should:
+
+Identify Methods:
+Research and list all the built-in methods for each data type.
+
+Demonstrate Functionality:
+For each method, write a code snippet that creates an instance of the data type and then applies the method.
+Print out the result so that the behavior of the method is clear.
+
+Documentation:
+Comment your code to explain what each section and method does.
+Maintain or Update google sheet daily with the tasks.
